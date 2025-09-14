@@ -1,21 +1,27 @@
 @model MvcMovie.Models.MovieGenreViewModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "My Movies";
 }
 
-<h1>Index</h1>
+<h1>My Movies</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
 <form asp-controller="Movies" asp-action="Index" method="get">
     <p>
-
+        @* Drop-down for Genre *@
         <select asp-for="MovieGenre" asp-items="Model.Genres">
             <option value="">All</option>
         </select>
 
+        @* Drop-down for Year *@
+        <select asp-for="SearchYear" asp-items="Model.Years">
+            <option value="">All Years</option>
+        </select>
+
+        @* Text box for Title search *@
         <label>Title: <input type="text" asp-for="SearchString" /></label>
         <input type="submit" value="Filter" />
     </p>

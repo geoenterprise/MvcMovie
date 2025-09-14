@@ -13,6 +13,8 @@ a {
 
 .btn-primary {
   color: #fff;
+  padding: 6px 12px;
+  margin: 4px 0; 
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
@@ -32,6 +34,12 @@ a {
 
 .box-shadow {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+input, select, textarea {
+  padding: 6px 10px;    /* space inside the input */
+  margin: 4px 5px;        /* space outside, between inputs */
+  box-sizing: border-box;
 }
 
 button.accept-policy {
